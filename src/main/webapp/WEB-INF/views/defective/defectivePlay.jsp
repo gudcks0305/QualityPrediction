@@ -1,7 +1,7 @@
 <%@ include file="../Layout/header.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="/blog/css/weatherUI.css">
-<link rel="stylesheet" href="/blog/css/predictInput.css">
+<link rel="stylesheet" href="/css/weatherUI.css">
+<link rel="stylesheet" href="/css/predictInput.css">
 <div class="container">
 
     <div class="weather-card one">

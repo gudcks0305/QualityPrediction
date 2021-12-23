@@ -1,14 +1,14 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ include file="../Layout/header.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="/blog/css/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
 <div class="container">
   <div id="layoutSidenav_content">
     <main>
       <div class="container-fluid px-4">
         <h1 class="mt-4">충진벽관 데이터</h1>
         <ol class="breadcrumb mb-4">
-          <li class="breadcrumb-item"><a href="/blog">Home</a></li>
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
           <li class="breadcrumb-item active">Tables</li>
         </ol>
         <div class="card mb-4">
@@ -57,14 +57,14 @@
                   <td>${defective.cjC1F}</td>
                   <td>${defective.cjC2F}</td>
                   <td>${defective.cjD3F}</td>
-                  <td><a href="/blog/defective/Detail?id=${defective.id}">상세보기</a></td>
+                  <td><a href="/defective/Detail?id=${defective.id}">상세보기</a></td>
                 </tr>
 
               </c:forEach>
               </tbody>
             </table>
           </div>
-          <a href="/blog/defective/defectiveinsertPage">추가하기</a>
+          <a href="/defective/defectiveinsertPage">추가하기</a>
         </div>
       </div>
     </main>

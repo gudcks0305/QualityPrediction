@@ -5,9 +5,6 @@
 <sec:authorize access="isAuthenticated()">
   <sec:authentication property="principal" var ="principal"/>
 </sec:authorize>
-<script>
-  alert("로그인이 된 사용자입니다.")
-</script>
 <!DOCTYPE html>
 <html lang="UTF-16">
 <head>
