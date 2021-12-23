@@ -119,4 +119,12 @@ public class DefectiveApiController {
         return new ResponseDto<Integer>(HttpStatus.OK,1);
     }
 
+    @PostMapping("/api/defective/insert")
+    public ResponseDto<Integer> insert(@RequestBody DefectiveData defectiveData){
+
+        defectiveService.제품저장하기(defectiveData);
+        return new ResponseDto<Integer>(HttpStatus.OK,1);
+    }
+
+
 }

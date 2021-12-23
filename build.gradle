@@ -20,14 +20,17 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    //implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    //implementation 'org.springframework.boot:spring-boot-starter-devtools-runtime'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.jetbrains:annotations:20.1.0'
     implementation 'mysql:mysql-connector-java'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
     implementation 'javax.servlet:jstl'											// JSTL
-    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'			// JSP 탬플릿 엔진
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'// JSP 탬플릿 엔진
     implementation 'org.springframework.security:spring-security-taglibs'
+
     implementation 'org.apache.commons:commons-exec:1.3'
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation('org.projectlombok:lombok')

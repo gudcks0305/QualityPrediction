@@ -7,18 +7,7 @@
 
     <form class="was-validated detail">
 
-        <div class="form-group">
-            <label for="id">id:</label>
-            <input type="number" class="form-control" id="id" placeholder="Enter id" name="id" required value="${detail.id}" readonly="readonly" >
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-        </div>
-        <div class="form-group">
-            <label for="date">date:</label>
-            <input type="number" class="form-control" id="date" placeholder="Enter date" name="date" required  value="${detail.date}" readonly="readonly">
-            <div class="valid-feedback">Valid.</div>
-            <div class="invalid-feedback">Please fill out this field.</div>
-        </div>
+
         <div class="form-group">
             <label for="Temp">Temp:</label>
             <input type="number" class="form-control" id="Temp" placeholder="Enter date" name="Temp" required   step="0.01" value="${detail.meanTemp}">
@@ -154,15 +143,15 @@
 
     </form>
 
-    <button id ="btn-update" class="btn btn-primary"> </button>
+    <button id ="btn-insert" class="btn btn-primary"> 추가하기</button>
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-<script src ="/blog/js/datatables-simple-demo.js"></script>
-<script src ="/blog/js/scripts.js"></script>
-<script src="/blog/js/defective.js
+<script src ="/js/datatables-simple-demo.js"></script>
+<script src ="/js/scripts.js"></script>
+<script src="/js/defective.js
 "></script>
 <%@ include file="../Layout/footer.jsp"%>
 

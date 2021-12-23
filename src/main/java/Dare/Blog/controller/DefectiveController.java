@@ -41,5 +41,9 @@ public class DefectiveController {
 
         return "/defective/defectiveDetail";
     }
+    @GetMapping("defective/defectiveinsertPage")
+    public String defectiveInsert(){
+        return "/defective/defectiveInsertPage";
+    }
 
 }

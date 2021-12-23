@@ -79,7 +79,7 @@
     <p id = "result"></p>
     <button id ="btn-predict" class="btn btn-primary btn-block">예측</button>
 </div>
-<script src ="/blog/js/weatherApi.js"></script>
-<script src ="/blog/js/defective.js"></script>
+<script src ="/js/weatherApi.js"></script>
+<script src ="/js/defective.js"></script>
 
 <%@ include file="../Layout/footer.jsp"%>

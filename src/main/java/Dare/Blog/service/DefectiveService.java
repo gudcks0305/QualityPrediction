@@ -5,9 +5,12 @@ import Dare.Blog.domain.DefectiveData;
 import Dare.Blog.repository.DefectiveRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -58,6 +61,11 @@ public class DefectiveService {
         defectiveData.setToSpeed(requestDefectiveData.getToSpeed());
         defectiveData.setDefective(requestDefectiveData.getDefective());
 
+    }
+    @Transactional
+    public void 제품저장하기(DefectiveData requestDefectiveData){
+        if(requestDefectiveData.getDate() == null) requestDefectiveData.setDate(new Timestamp(System.currentTimeMillis()));
+        defectiveRepository.save(requestDefectiveData);
     }
 
 

@@ -4,8 +4,7 @@ import Dare.Blog.domain.User;
 import Dare.Blog.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.transaction.Transactional;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserService {
@@ -26,5 +25,7 @@ public class UserService {
         return -1;
 
     }
+
+
 
 }

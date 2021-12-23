@@ -6,6 +6,9 @@ let index = {
         $("#btn-update").on("click",()=>{
             this.update();
         });
+        $("#btn-insert").on("click",()=>{
+            this.insert();
+        });
 
 
     },
@@ -21,7 +24,7 @@ let index = {
         }
         $.ajax({
             type : "POST",
-            url:"/blog/api/defective",
+            url:"/api/defective",
             //url: 'http//:localhost:8000/api',
             data: JSON.stringify(data),
             contentType :"application/json; charset=utf-8",
@@ -52,6 +55,50 @@ let index = {
     update:function (){
         let id = $("#id").val()
         let data = {
+            date : new Date().getUTCDate(),
+            meanTemp : $("#Temp").val(),
+            defective: $("#defective").val(),
+            label: $("#label").val(),
+            cjC1F: $("#cjC1F").val(),
+            cjC2F : $("#cjC2F").val(),
+            cjD3F : $("#cjD3F").val(),
+            cjC1S: $("#cjC1S").val(),
+            cjC2S: $("#cjC2S").val(),
+            cjD3S: $("#cjD3S").val(),
+            cjMoterRpm : $("#cjMoterRpm").val(),
+            cjOutC1 : $("#cjOutC1").val(),
+            cjOutC2: $("#cjOutC2").val(),
+            cjOutD3: $("#cjOutD3").val(),
+            OutMoterRpm: $("#OutMoterRpm").val(),
+            inC1 : $("#inC1").val(),
+            inC2: $("#inC2").val(),
+            inD3: $("#inD3").val(),
+            inMoterRpm : $("#inMoterRpm").val(),
+            toSpeed: $("#toSpeed").val(),
+            waterTemp: $("#waterTemp").val(),
+
+        }
+        $.ajax({
+            type : "POST",
+            url:"/api/defective/"+id,
+            //url: 'http//:localhost:8000/api',
+            data: JSON.stringify(data),
+            contentType :"application/json; charset=utf-8",
+            dataType :"json"
+        }).done(function (res){
+            alert("수정완료")
+            location.href("/")
+
+
+
+        }).fail(function (err){
+            console.log(err)
+            alert(JSON.stringify(err))
+        }); // 통신을 이용해서 3개의 데이터를 제이슨으로 변경하여 insert요청
+
+    },
+    insert:function (){
+        let data = {
 
             meanTemp : $("#Temp").val(),
             defective: $("#defective").val(),
@@ -77,13 +124,12 @@ let index = {
         }
         $.ajax({
             type : "POST",
-            url:"/blog/api/defective/"+id,
-            //url: 'http//:localhost:8000/api',
+            url:"/api/defective/insert",
             data: JSON.stringify(data),
             contentType :"application/json; charset=utf-8",
             dataType :"json"
         }).done(function (res){
-            alert("수정완료")
+            alert("추가완료")
             location.href("/")
 
 
