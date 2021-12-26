@@ -1,13 +1,22 @@
 package Dare.Blog.domain;
 
 import Dare.Blog.model.RoleType;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-@Entity // user 클래스가 mysql에 테이블 생성
+
 //@DynamicInsert insert시에 널값무시
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Entity // user 클래스가 mysql에 테이블 생성
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

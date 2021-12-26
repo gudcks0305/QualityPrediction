@@ -1,6 +1,8 @@
 package Dare.Blog.Config.auth;
 
 import Dare.Blog.domain.User;
+import lombok.Data;
+import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -8,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 // 스프링이 로그인요청 가로채서 로그인하고 완료되면 유저 디테일 타입 오브젝트를 스프링
 // 시큐리티의 고유한 세션저장소에 저장
+@Getter
 public class PrincipalDetail implements UserDetails {
     private User user;
 
